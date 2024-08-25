@@ -217,11 +217,11 @@ def main():
     if st.session_state.game_over:
         st.markdown("### How was your experience?")
         feedback = streamlit_feedback(
-            feedback_type="faces",
+            feedback_type="thumbs",
             key="feedback"
         )
         if feedback:
-            st.write(f"You rated your experience as: {feedback}")
+            st.write(f"Thank you for your feedback {feedback}!")
 
     # Add footer
     st.markdown(create_footer_html(), unsafe_allow_html=True)
