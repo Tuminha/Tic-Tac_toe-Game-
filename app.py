@@ -2,6 +2,7 @@ import streamlit as st
 import tictactoe as ttt
 from streamlit_js_eval import streamlit_js_eval
 import os
+from streamlit_feedback import streamlit_feedback
 
 def reset_game_state():
     st.session_state.board = ttt.initial_state()
@@ -215,11 +216,12 @@ def main():
     # Feedback
     if st.session_state.game_over:
         st.markdown("### How was your experience?")
-        feedback = st.empty()
-        user_feedback = feedback.feedback(options="faces")
-        if user_feedback is not None:
-            sentiment_mapping = ["Terrible", "Bad", "Okay", "Good", "Excellent"]
-            st.write(f"You rated your experience as: {sentiment_mapping[user_feedback]}")
+        feedback = streamlit_feedback(
+            feedback_type="faces",
+            key="feedback"
+        )
+        if feedback:
+            st.write(f"You rated your experience as: {feedback}")
 
     # Add footer
     st.markdown(create_footer_html(), unsafe_allow_html=True)
