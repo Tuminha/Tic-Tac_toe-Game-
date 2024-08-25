@@ -6,6 +6,10 @@ Welcome to the Tic-Tac-Toe Game repository! This project implements a classic Ti
 
 [View the repository](https://github.com/Tuminha/Tic-Tac_toe-Game-)
 
+![Tic-Tac-Toe App Screenshot](images/tic-tac-toe-tuminha-app.png)
+
+[Play the game online](https://tic-tac-toe-tuminha.streamlit.app/)
+
 ## 📋 Table of Contents
 
 - [Installation](#installation)
